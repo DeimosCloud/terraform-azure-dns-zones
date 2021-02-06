@@ -1,7 +1,8 @@
-# azure-dns-zones
+# Terraform Azure DNS Zones Module
 
 A terraform module for managing Private and Public DNS zones on Azure## Requirements
 
+## Usage
 ```hcl
 module "dns_zone" {
   source                      = "../modules/dns_zone"
@@ -11,6 +12,28 @@ module "dns_zone" {
   private_dns_zone_vnet_links = [var.vnet_id]
 }
 ```
+## Doc generation
+
+Code formatting and documentation for variables and outputs is generated using [pre-commit-terraform hooks](https://github.com/antonbabenko/pre-commit-terraform) which uses [terraform-docs](https://github.com/segmentio/terraform-docs).
+
+Follow [these instructions](https://github.com/antonbabenko/pre-commit-terraform#how-to-install) to install pre-commit locally.
+
+And install `terraform-docs` with
+```bash
+go get github.com/segmentio/terraform-docs
+```
+or
+```bash
+brew install terraform-docs.
+```
+
+## Contributing
+
+Report issues/questions/feature requests on in the issues section.
+
+Full contributing guidelines are covered [here](CONTRIBUTING.md).
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Requirements
 | Name | Version |
@@ -42,3 +65,5 @@ module "dns_zone" {
 |------|-------------|
 | name\_servers | n/a |
 | private\_dns\_zone\_name | n/a |
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
