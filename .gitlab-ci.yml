@@ -6,3 +6,6 @@ include:
   - project: 'deimosdev/tooling/ci-templates'
     ref: 'master'
     file: 'terraform.yml'
+
+before_script:
+  - cp $providers_tf ./provider.tf

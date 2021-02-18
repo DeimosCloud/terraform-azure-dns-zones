@@ -34,18 +34,18 @@ Report issues/questions/feature requests on in the issues section.
 Full contributing guidelines are covered [here](CONTRIBUTING.md).
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
+
 | Name | Version |
 |------|---------|
 | terraform | >= 0.12 |
-| azurerm | >= 2.0 |
+| azurerm | ~> 2.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| azurerm | >= 2.0 |
+| azurerm | ~> 2.0 |
 | random | n/a |
 
 ## Inputs
