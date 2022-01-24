@@ -13,3 +13,16 @@ config-map-aws-auth*.yaml
 kubeconfig_*
 *.swp
 providers_test.tf
+
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform lockfile
+.terraform.lock.hcl
+
+#  Crash log files
+crash.log
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
