@@ -12,10 +12,18 @@ on:
 jobs:
   validate:
     name: Validate
-    runs-on: [self-hosted, linux, ARM64]
+    runs-on: ubuntu-latest
     steps:
     - name: Check out code
       uses: actions/checkout@v1
+
+    - name: Add default azure config
+      run: |
+        cat <<EOF > provider.tf
+          provider "azurerm" {
+            features {}
+          }
+        EOF
 
     - name: Run a Terraform init
       uses: docker://hashicorp/terraform:0.12.11
